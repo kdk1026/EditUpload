@@ -17,9 +17,10 @@ import kr.co.test.common.util.RequestUtil;
 
 /**
  * <pre>
+ * -----------------------------------
  * 개정이력
  * -----------------------------------
- * 2021. 7. 11. 김대광	최초작성
+ * 2021. 7. 12. kdk	최초작성
  * </pre>
  * 
  * <pre>
@@ -27,18 +28,18 @@ import kr.co.test.common.util.RequestUtil;
  * - 서비스 레이어 분리 / 유효성 검사 / 파일 사이즈 체크 등등
  * </pre>
  *
- * @author 김대광
+ * @author kdk
  */
 @RestController
-@RequestMapping("/ckeditor")
-public class CkEditorUploadController {
-	
+@RequestMapping("/summernote")
+public class SummernoteUploadController {
+
 	// WebMvcConfig addResourceHandlers 참고
 	private final String resourcePath = "/upload/";
 	
 	private final String editorUploadPath = "upload";
-	private final String editorImgPath = "ckeditor";
-
+	private final String editorImgPath = "summernote";
+	
 	@PostMapping("/img_upload")
 	public Map<String, Object> uploadFile(MultipartFile upload, HttpServletRequest request) throws IllegalStateException, IOException {
 		
