@@ -44,8 +44,6 @@ public class CkEditorUploadController {
 		
 		//System.out.println( upload.getOriginalFilename() );
 		
-		String fileUrl = "";
-		
 		String webAppRootPath = "D:/";
 		String uploadPath = webAppRootPath + editorUploadPath + "/" + editorImgPath;
 		
@@ -61,7 +59,7 @@ public class CkEditorUploadController {
 		upload.transferTo(saveFile);
 		
 		String serverDomain = RequestUtil.getRequestDomain(request);
-		fileUrl = serverDomain + resourcePath + editorImgPath + "/" + saveFileName;
+		String fileUrl = serverDomain + resourcePath + editorImgPath + "/" + saveFileName;
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("url", fileUrl);
